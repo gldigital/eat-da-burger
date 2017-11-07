@@ -1,8 +1,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var methodOverried = require("method-override");
 
 // Import routes and give the server access to them.
-var burgers_Controller = require("./controllers/burgers_Controller.js");
+var burgersController = require("./controllers/burgers_Controller.js");
 var burger = require("./models/burger.js");
 
 
@@ -30,6 +31,6 @@ app.get("/", function(req, res) {
     });
   });
 
-app.use("/api/burgers", burgers_Controller);
+app.use("/api/burgers", burgersController);
 
 app.listen(port);
