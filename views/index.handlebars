@@ -1,37 +1,51 @@
-<h1>Eat Da Burger</h1>
+<div class="container">
+{{!-- start site container --}}
 
-<h2>Let's eat!</h2>
+    <img src="https://cdn.arstechnica.net/wp-content/uploads/2017/08/impossible-burgers.jpg" class="heroIMG center-block" alt="">
+    <h1 class="text-center">Eat Da Burger</h1>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-button devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div class="col-md-6">
+        <h2>Let's eat!</h2>
+          <ul>
+            {{#each burgers}}
+              {{#unless devoured}}
+                {{> burgers/burger-button devoured=false}}
+              {{/unless}}
+            {{/each}}
+          </ul>
+    </div>
 
-<h2>Burger's Devoured!</h2>
+    <div class="col-md-6">
+        <h2>Burger's Devoured!</h2>
+          <ul>
+            {{#each burgers}}
+              {{#if devoured}}
+                {{> burgers/burger-block devoured=true}}
+              {{/if}}
+            {{/each}}
+          </ul>
+    </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    
+      <h2>Add a Burger</h2>
+        <form class="create-form">
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+          <div class="form-group">
+            <label for="burger">Burger Name:</label>
+            <input type="text" id="newBurger" name="name">
+          </div>
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="newBurger" name="name">
-  </div>
+          <div class="form-group">
+            <label for="burger_status">Confirm Purchase</label><br>
+            <input type="radio" name="status" value="0"> Yes, I want this.
+          </div>
 
-  <div class="form-group">
-    <label for="burger_status">Purchase?</label><br>
-    <input type="radio" name="status" value="0"> Yes!
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+          <button type="submit">Add Burger</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+  
+{{!-- end site container --}}
+</div>

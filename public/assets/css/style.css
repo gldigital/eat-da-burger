@@ -1,7 +1,15 @@
+body {
+  background: #EFF0EB !important;
+}
+ul {
+  padding-left: 10px !important;
+  padding-top: 10px;
+}
 li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
+    font-size: 18px;
   }
   
   .label {
@@ -18,3 +26,7 @@ li {
     margin-bottom: 5px;
   }
   
+  .heroIMG {
+    width: 500px;
+    height: auto;
+  }
