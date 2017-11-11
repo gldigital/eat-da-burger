@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var methodOverried = require("method-override");
 
 // Import routes and give the server access to them.
-var burgersController = require("./controllers/burgers_Controller.js");
+var burgersController = require("./controllers/burgers_controller.js");
 var burger = require("./models/burger.js");
 
 
